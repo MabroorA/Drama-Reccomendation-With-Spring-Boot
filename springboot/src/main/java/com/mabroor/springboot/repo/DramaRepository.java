@@ -3,5 +3,5 @@ package com.mabroor.springboot.repo;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ActorRepository {
+public interface DramaRepository {
 }
