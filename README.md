@@ -13,6 +13,7 @@ AWS: Utilize AWS services for hosting, machine learning, and deployment.
 # Current Progress
 
 Currently, the project has been initially been setup using Spring Boot project,the necessary dependencies have been configured.
+- Api connection has been made using a external "https://www.tvmaze.com/" api
 
 # Next Steps
 Designing the database schema for storing K-Drama information and user profiles. These tasks will be completed in the upcoming development phase.
