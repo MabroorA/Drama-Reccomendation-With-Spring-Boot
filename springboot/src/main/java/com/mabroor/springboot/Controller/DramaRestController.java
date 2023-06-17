@@ -38,22 +38,15 @@ public class DramaRestController {
         return this.dramaService.GetShows();
     }
 
-    @GetMapping("/shows/q={name}")
-    public Flux<Drama> FindAllShowsByName(@RequestParam String name){
-        return this.dramaService.GetShowsByName(name);
+    @GetMapping("/search/shows")
+    public Flux<Drama> FindAllShowsByName(@RequestParam String q){
+        return this.dramaService.GetShowsByName(q);
     }
-//    @GetMapping("/shows{id}")
-//    public Mono<Drama> findDramabyID(Integer id){
-//        return webClient.get().uri("/shows/{id}")
-//                .retrieve()
-//                .bodyToMono(Drama.class);
-//
-//    }
 
-//    @GetMapping("/")
-//    public String Greeting(){
-//        return ("hii");
-//    }
+    @GetMapping("/")
+    public String Greeting(){
+        return ("hii");
+    }
 
 
     }
