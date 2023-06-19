@@ -24,12 +24,19 @@ public class DramaService {
                 .bodyToFlux(Drama.class);
     }
 
-    public Flux<Drama> GetShowsByName(@RequestParam String name){
+    public Flux<Drama> GetShowsByRelevancey(@RequestParam String name){
         return this.webClient
                 .get()
                 .uri("/search/shows?q={name}", name)
                 .retrieve()
                 .bodyToFlux(Drama.class);
+    }
+    public Mono<Drama> GetShowByName(@RequestParam String name){
+        return this.webClient
+                .get()
+                .uri("/singlesearch/shows?q={name}",name)
+                .retrieve()
+                .bodyToMono(Drama.class);
     }
     
 }

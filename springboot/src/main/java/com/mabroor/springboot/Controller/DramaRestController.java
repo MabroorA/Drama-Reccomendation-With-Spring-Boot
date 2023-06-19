@@ -33,6 +33,11 @@ public class DramaRestController {
 
     @Autowired
     DramaService dramaService;
+
+    @GetMapping("/")
+    public String Greeting(){
+        return ("hii");
+    }
     @GetMapping("/shows")
     public Flux<Drama> FindAllShows(){
         return this.dramaService.GetShows();
@@ -40,15 +45,13 @@ public class DramaRestController {
 
     @GetMapping("/search/shows")
     public Flux<Drama> FindAllShowsByName(@RequestParam String q){
-        return this.dramaService.GetShowsByName(q);
+        return this.dramaService.GetShowsByRelevancey(q);
+    }
+    @GetMapping("/singlesearch/shows")
+    public Mono<Drama> FindSingleShowByName(@RequestParam String q) {
+        return  this.dramaService.GetShowByName(q);
     }
 
-    @GetMapping("/")
-    public String Greeting(){
-        return ("hii");
-    }
-
-
-    }
+}
 
 
