@@ -38,5 +38,15 @@ public class DramaService {
                 .retrieve()
                 .bodyToMono(Drama.class);
     }
-    
+
+    public Mono<Drama> GetShowByID(@RequestParam String id){
+        return this.webClient
+                .get()
+                .uri("/lookup/shows?tvrage={id}",id)
+                .retrieve()
+                .bodyToMono(Drama.class);
+    }
+
+
+
 }
