@@ -1,5 +1,6 @@
 package com.mabroor.springboot.Service;
 
+import com.mabroor.springboot.domain.Actor;
 import com.mabroor.springboot.domain.Drama;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -48,5 +49,12 @@ public class DramaService {
     }
 
 
+    public Flux<Actor> GetActorByName(@RequestParam String name) {
+        return this.webClient
+                .get()
+                .uri("/search/people?q={name}",name)
+                .retrieve()
+                .bodyToFlux(Actor.class);
 
+    }
 }

@@ -1,8 +1,8 @@
 package com.mabroor.springboot.Controller;
 
 import com.mabroor.springboot.Service.DramaService;
+import com.mabroor.springboot.domain.Actor;
 import com.mabroor.springboot.domain.Drama;
-import com.mabroor.springboot.repo.DramaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +40,12 @@ public class DramaRestController {
     public Mono<Drama> FindSingleShowByID(@RequestParam("tvrage") String tvrage) {
         return  this.dramaService.GetShowByID(tvrage);
     }
+
+    @GetMapping("/search/Actor")
+    public Flux<Actor> FindActorByName(@RequestParam String q){
+        return this.dramaService.GetActorByName(q);
+    }
+
 
 }
 

@@ -1,66 +1,60 @@
+
 package com.mabroor.springboot.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import jakarta.annotation.Generated;
 
-@Entity
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+    "score",
+    "person"
+})
+@Generated("jsonschema2pojo")
 public class Actor {
-    @Id
-    @GeneratedValue
-    private Integer id;
-    private  String name;
-    private  String Birthday;
-    private  String Height;
-    public Actor(String name, String birthday, String height) {
-        this.name = name;
-        Birthday = birthday;
-        Height = height;
+
+    @JsonProperty("score")
+    private Double score;
+    @JsonProperty("person")
+    private Person person;
+    @JsonIgnore
+    private Map<String, Object> additionalProperties = new LinkedHashMap<String, Object>();
+
+    @JsonProperty("score")
+    public Double getScore() {
+        return score;
     }
 
-    public Actor() {}
-
-
-    // getters
-    public String getName() {
-        return name;
+    @JsonProperty("score")
+    public void setScore(Double score) {
+        this.score = score;
     }
 
-    public String getBirthday() {
-        return Birthday;
+    @JsonProperty("person")
+    public Person getPerson() {
+        return person;
     }
 
-    public String getHeight() {
-        return Height;
-    }
-    public Integer getId() {
-        return id;
+    @JsonProperty("person")
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
-
-    //setters
-    public void setId(Integer id) {
-            this.id = id;
-        }
-    public void setName(String name) {
-        this.name = name;
+    @JsonAnyGetter
+    public Map<String, Object> getAdditionalProperties() {
+        return this.additionalProperties;
     }
 
-    public void setBirthday(String birthday) {
-        Birthday = birthday;
+    @JsonAnySetter
+    public void setAdditionalProperty(String name, Object value) {
+        this.additionalProperties.put(name, value);
     }
 
-    public void setHeight(String height) {
-        Height = height;
-    }
-    // ToString
-    @Override
-    public String toString() {
-        return "Actor{" +
-                "name='" + name + '\'' +
-                ", Birthday='" + Birthday + '\'' +
-                ", Height='" + Height + '\'' +
-                '}';
-    }
 }
