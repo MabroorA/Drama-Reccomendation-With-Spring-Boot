@@ -18,6 +18,9 @@ Currently, the project has been initially been setup using Spring Boot project,t
      -  */search/shows* Lists all shows
      -  */shows?q=:query* Example: https://api.tvmaze.com/search/shows?q=girls
      -  */search/people?q=:query* Example: https://api.tvmaze.com/search/people?q=lauren
+- FrontEnd Connected 
+  - /shows endpoint is showing all the current shows by name on React
+  
 
 # Next Steps
-Creating the rest of the endpoints such as show by year ect.
+React Components need to be created and formatted as well as the front end needs to be setup before adding the rest of the endpoints.
