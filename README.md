@@ -23,4 +23,6 @@ Currently, the project has been initially been setup using Spring Boot project,t
   
 
 # Next Steps
+Learn/Work on React DropZone for Shows display
 React Components need to be created and formatted as well as the front end needs to be setup before adding the rest of the endpoints.
+
