@@ -4,15 +4,13 @@ import com.mabroor.springboot.Service.DramaService;
 import com.mabroor.springboot.domain.Actor;
 import com.mabroor.springboot.domain.Drama;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping("")
+@CrossOrigin("*")
 public class DramaRestController {
 
     @Autowired
