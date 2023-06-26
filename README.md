@@ -16,7 +16,7 @@ AWS: Utilize AWS services for hosting, machine learning, and deployment.
 
 Currently, the project has been initially been setup using Spring Boot project,the necessary dependencies have been configured.
 - Api connection has been made using a external "https://www.tvmaze.com/" api
-  - Enpoints
+  - Endpoints
      -  */search/shows* Lists all shows
      -  */shows?q=:query* Example: https://api.tvmaze.com/search/shows?q=girls
      -  */search/people?q=:query* Example: https://api.tvmaze.com/search/people?q=lauren
