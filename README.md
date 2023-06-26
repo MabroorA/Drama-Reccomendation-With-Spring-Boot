@@ -6,6 +6,8 @@ The application will utilize machine learning algorithms to analyze user prefere
 
 Spring Boot: Backend framework for building RESTful APIs and managing data persistence.
 
+React : Frontend framework for beautifying the website and using apis to correctly display/interpret data
+
 Docker: Containerization platform to package the application and its dependencies.
 
 AWS: Utilize AWS services for hosting, machine learning, and deployment.
