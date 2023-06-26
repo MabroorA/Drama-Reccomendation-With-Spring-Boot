@@ -20,9 +20,12 @@ Currently, the project has been initially been setup using Spring Boot project,t
      -  */search/people?q=:query* Example: https://api.tvmaze.com/search/people?q=lauren
 - FrontEnd Connected 
   - /shows endpoint is showing all the current shows by name on React
+  - React Component Created for Shows showing image, Name and genres of the show
   
 
 # Next Steps
-Learn/Work on React DropZone for Shows display
-React Components need to be created and formatted as well as the front end needs to be setup before adding the rest of the endpoints.
+- Create FrontEnd
+  - Learn/Work on React to beautify the website and added correct endpoints and structure the layout of the website
+
+
 
