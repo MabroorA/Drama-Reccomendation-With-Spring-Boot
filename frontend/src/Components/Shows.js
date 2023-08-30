@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import axios from 'axios';
 
+
 function Shows() {
     
     const [shows,setshows] = useState([]);
@@ -21,12 +22,17 @@ function Shows() {
     return shows.map((shows, index) => {
 
         return (
-        <div key= {index}>
-            <img src ={shows.image.medium} alt ={shows.name+"picture"} /> 
-            <h1>{shows.name}</h1>
-            <p>{"Genres ["+shows.genres+"]"}</p>
-            
-        </div>
+        <>
+            <div className='Body' >
+                <div key= {index}>
+                    
+                    <img src ={shows.image.medium} alt ={shows.name+"picture"} /> 
+                    <h1 >{shows.name}</h1>
+                    <p>{"Genres ["+shows.genres+"]"}</p>
+                    
+                </div>
+            </div>
+        </>
         );
     });
 
