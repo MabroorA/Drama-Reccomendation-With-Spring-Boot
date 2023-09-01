@@ -4,21 +4,10 @@ import Shows from './Components/Shows';
 import NavBar from './Components/NavBar';
 import Actors from './Components/pages/Actors';
 import Home from './Components/pages/Home';
-
+import { Route,Routes } from 'react-router-dom';
 
 function App() {
-  let Component
-  switch (window.location.pathname){
-    case "/":
-      Component = <Home/>
-      break
-    case "/Shows":
-      Component = <Shows/>
-      break
-    case "/Actors":
-      Component = <Actors/>
-      break  
-  }
+  
   
   
   return (
@@ -27,7 +16,13 @@ function App() {
       
     <NavBar/>
     <div className='container'>
-    {Component}
+      <Routes>
+        <Route path ="/" element={<Home/>} />
+        <Route path ="/shows" element={<Shows/>} />
+        <Route path ="/Actors" element={<Actors/>} />
+
+        
+      </Routes>
     </div>
 
 
