@@ -30,6 +30,9 @@ Currently, the project has been initially been setup using Spring Boot project,t
   - Create Main Page displaying Most Popular Dramas or Dramas in order of Alphabet.
     - Top Menu
     - Search Bar
+    - Actors,Shows Page
+    - Use react Router for the above
+
       
   - Learn/Work on React to beautify the website and added correct endpoints and structure the layout of the website
   - 
